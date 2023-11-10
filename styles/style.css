@@ -17,5 +17,12 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image:
+          repeating-linear-gradient(-90deg, var(--line-color-gradiend) 0, var(--line-color-gradiend) 2px, transparent 2px, transparent 4px),
+          repeating-linear-gradient(var(--line-color-gradiend) 0, var(--line-color-gradiend) 2px, transparent 2px, transparent 4px),
+          linear-gradient(180deg, var(--start-color-gradiend) 0.01%, var(--end-color-gradiend) 100%);
+  background-size: cover;
   font-family: var(--font-inter), sans-serif, serif;
+  background-color: var(--background-color);
+  color: var(--accent-color);
 }

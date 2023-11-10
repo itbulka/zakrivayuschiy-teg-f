@@ -4,4 +4,9 @@
     --font-press: 'Press Start 2P';
     --font-weight-title: 400;
     --font-weight-text: 700;
+    --line-color-gradiend: #d3d3d3;
+    --start-color-gradiend: #e7e7e7;
+    --end-color-gradiend: #1a1a1a;
+    --background-color: #fff;
+    --accent-color: #000;
 }
