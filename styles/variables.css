@@ -8,6 +8,7 @@
     --start-color-gradiend: #e7e7e7;
     --end-color-gradiend: #1a1a1a;
     --background-color: #fff;
-    --accent-color: #000;
+    --accent-color: rgba(0, 0, 0, 1);
+    --accent-color-opacity: rgba(0, 0, 0, 0.6);
     --text-stroke-color: #fff;
 }
