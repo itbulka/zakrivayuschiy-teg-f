@@ -254,6 +254,25 @@
     gap: 6px;
 }
 
+.card__icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    border: transparent 2px solid;
+    transition: border ease 0.3s;
+    padding: 0;
+}
+
+.card__icon-button:focus {
+    appearance: none;
+    outline: none;
+}
+
+.card__icon-button:focus-visible {
+    border: var(--accent-color) 2px solid;
+}
+
 .card__like-button {
     font-family: var(--font-press);
     font-size: 14px;

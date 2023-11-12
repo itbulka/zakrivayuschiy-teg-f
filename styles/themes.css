@@ -10,6 +10,7 @@
     --accent-color: rgba(0, 0, 0, 1);
     --accent-color-opacity: rgba(0, 0, 0, 0.6);
     --color-button-text: rgba(255, 255, 255, 1);
+    --color-heart-contour: rgba(0, 0, 0, 1);
 
     --line-color-gradiend: #d3d3d3;
     --start-color-gradiend: #e7e7e7;
@@ -23,6 +24,7 @@
     --accent-color: rgba(0, 204, 20, 1);
     --accent-color-opacity: rgba(0, 204, 20, 0.6);
     --color-button-text: rgba(0, 204, 20, 1);
+    --color-heart-contour: rgba(0, 204, 20, 1);
 
     --line-color-gradiend: #000;
     --start-color-gradiend: #007f0c;
@@ -37,6 +39,7 @@
         --accent-color: rgba(0, 0, 0, 1);
         --accent-color-opacity: rgba(0, 0, 0, 0.6);
         --color-button-text: rgba(255, 255, 255, 1);
+        --color-heart-contour: rgba(0, 0, 0, 1);
 
         --line-color-gradiend: #d3d3d3;
         --start-color-gradiend: #e7e7e7;
@@ -52,6 +55,7 @@
         --accent-color: rgba(0, 204, 20, 1);
         --accent-color-opacity: rgba(0, 204, 20, 0.6);
         --color-button-text: rgba(0, 204, 20, 1);
+        --color-heart-contour: rgba(0, 204, 20, 1);
 
         --line-color-gradiend: #000;
         --start-color-gradiend: #007f0c;

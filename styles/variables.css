@@ -12,4 +12,8 @@
     --accent-color-opacity: rgba(0, 0, 0, 0.6);
     --color-button-text: rgba(255, 255, 255, 1);
     --text-stroke-color: #fff;
+
+    --color-heart-main: transparent;
+    --color-heart-core: transparent;
+    --color-heart-contour: rgba(0, 0, 0, 1);
 }
