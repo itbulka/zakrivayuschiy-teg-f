@@ -15,11 +15,11 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  font-family: var(--font-inter), sans-serif, serif;
-  background-color: var(--background-color);
-  color: var(--accent-color);
+    min-inline-size: 320px;
+    min-block-size: 100dvb;
+    font-family: var(--font-inter), sans-serif, serif;
+    background-color: var(--background-color);
+    color: var(--accent-color);
 }
 
 .page:before {
@@ -43,8 +43,8 @@
     grid-template-rows: repeat(3, 1fr);
     font-family: var(--font-press);
     margin: 100px auto 0;
-    width: 700px;
-    height: 368px;
+    width: clamp(375px, 100%, 696px);
+    height: 375px;
     background-color: var(--background-color);
     border: var(--accent-color) 2px solid;
 }
@@ -57,13 +57,13 @@
 }
 
 .header__title {
-    font-size: 65px;
+    font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
     font-weight: 400;
     padding-bottom: 20px;
 }
 
 .header__subtitle {
-    font-size: 23px;
+    font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
     font-weight: 400;
 }
 
@@ -107,13 +107,14 @@
 .content__list__card {
     background-color: var(--background-color);
     border: var(--accent-color) 2px solid;
-    width: 100%;
+    width: clamp(375px, 100%, 696px);
+    max-height: 959px;
 }
 
 .content__list__card-title {
     font-size: 18px;
     font-weight: 700;
-    padding: 4px;
+    padding: 4px 10px;
 }
 
 .card-content-text {
@@ -166,7 +167,7 @@
 .content__list__card-buttons {
     display: flex;
     justify-content: end;
-    place-items: center;
+    align-items: center;
     margin-inline: 25px;
     margin-block-end: 25px;
     gap: 12px;
@@ -186,14 +187,38 @@
 .footer {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 50px 0 102px;
 }
 
 .footer__button {
-    width: 335px;
-    height: 51px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    width: clamp(305px, 100%, 335px);
+    padding-block: 15px;
     font-family: var(--font-press);
     font-size: 14px;
     font-weight: 400;
     border: var(--accent-color) 2px solid;
+}
+
+.footer__button-icon {
+    width: 21px;
+    height: 21px;
+}
+
+@media (width <= 375px) {
+    .header {
+        height: 368px;
+    }
+
+    .content__list__card {
+        min-height: 760px;
+    }
+
+    .footer__button {
+        flex-direction: column;
+    }
 }
