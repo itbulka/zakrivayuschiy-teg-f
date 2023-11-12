@@ -12,6 +12,8 @@
     --line-color-gradiend: #d3d3d3;
     --start-color-gradiend: #e7e7e7;
     --end-color-gradiend: #1a1a1a;
+
+    --text-stroke-color: #fff;
 }
 
 :root.theme-dark {
@@ -21,6 +23,8 @@
     --line-color-gradiend: #000;
     --start-color-gradiend: #007f0c;
     --end-color-gradiend: #004306;
+
+    --text-stroke-color: #000;
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,6 +35,8 @@
         --line-color-gradiend: #d3d3d3;
         --start-color-gradiend: #e7e7e7;
         --end-color-gradiend: #1a1a1a;
+
+        --text-stroke-color: #fff;
     }
 }
 
@@ -42,5 +48,7 @@
         --line-color-gradiend: #000;
         --start-color-gradiend: #007f0c;
         --end-color-gradiend: #004306;
+
+        --text-stroke-color: #000;
     }
 }
