@@ -12,6 +12,8 @@
     --accent-color-opacity: rgba(0, 0, 0, 0.6);
     --color-button-text: rgba(255, 255, 255, 1);
     --text-stroke-color: #fff;
+    --font-weight-small: 400;
+    --font-weight-large: 700;
 
     --color-heart-main: transparent;
     --color-heart-core: transparent;

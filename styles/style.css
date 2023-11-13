@@ -18,6 +18,7 @@
     min-inline-size: 320px;
     min-block-size: 100dvb;
     font-family: var(--font-inter), sans-serif, serif;
+    font-variation-settings: "wght" var(--font-weight-small);
     background-color: var(--background-color);
     color: var(--accent-color);
 }
@@ -39,6 +40,9 @@
 }
 
 .button {
+    font-family: var(--font-press);
+    font-size: 14px;
+    font-weight: 400;
     position: relative;
     box-shadow: 0 0 0 0 var(--accent-color);
     background-color: var(--background-color);
@@ -194,7 +198,7 @@
 
 .content__list__card-title {
     font-size: 18px;
-    font-weight: 700;
+    font-variation-settings: "wght" var(--font-weight-large);
     padding: 4px 10px;
 }
 
@@ -207,7 +211,6 @@
 
 .content__list__card-text {
     font-size: 18px;
-    font-weight: 400;
 }
 
 .content__list__card-img {
@@ -274,10 +277,51 @@
 }
 
 .card__like-button {
+    width: 130px;
+    height: 38px;
+    border: var(--accent-color) 2px solid;
+}
+
+/*  DIALOG  */
+
+.dialog[open] {
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: clamp(341px, 100%, 357px);
+    max-height: 195px;
+    background-color: var(--background-color);
+    border: var(--accent-color) 2px solid;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dialog__content {
+    display: flex;
+    column-gap: 20px;
+    place-items: center;
+}
+
+.dialog-icon {
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: difference;
+    color: var(--color-button-text);
+}
+
+.dialog__text {
     font-family: var(--font-press);
     font-size: 14px;
     font-weight: 400;
-    width: 130px;
+    max-width: 234px;
+    color: var(--accent-color);
+}
+
+.dialog__button {
+    width: clamp(257px, 100%, 293px);
     height: 38px;
     border: var(--accent-color) 2px solid;
 }
@@ -298,17 +342,12 @@
     align-items: center;
     width: clamp(305px, 100%, 335px);
     padding-block: 15px;
-    font-family: var(--font-press);
-    font-size: 14px;
-    font-weight: 400;
     border: var(--accent-color) 2px solid;
 }
 
 .footer__button-icon {
     position: relative;
     z-index: 1;
-    width: 21px;
-    height: 21px;
     mix-blend-mode: difference;
     color: var(--color-button-text);
 }

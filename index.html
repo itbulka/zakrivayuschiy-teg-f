@@ -82,10 +82,24 @@
         </li>
 
       </ul>
+
+      <dialog id="myDialog" class="dialog">
+        <div class="dialog__content">
+          <svg class="dialog-icon" width="39" height="39" viewBox="0 0 39 39">
+            <use href="./svg/floppy.svg#floppy" class="dialog-icon"/>
+          </svg>
+          <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <button type="button" class=" button dialog__button" onclick="window.myDialog.close()">
+          <span class="button__text">ОК</span>
+        </button>
+      </dialog>
+
     </main>
+
     <footer class="footer">
-      <button class="button footer__button">
-        <svg class="footer__button-icon">
+      <button type="button" class="button footer__button" onclick="window.myDialog.showModal()">
+        <svg class="footer__button-icon" width="21" height="21" viewBox="0 0 39 39">
           <use href="./svg/floppy.svg#floppy"/>
         </svg>
         <span class="button__text">Сохранить на память</span>
