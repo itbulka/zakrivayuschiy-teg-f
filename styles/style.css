@@ -193,7 +193,6 @@
     background-color: var(--background-color);
     border: var(--accent-color) 2px solid;
     width: clamp(375px, 100%, 696px);
-    max-height: 959px;
 }
 
 .content__list__card-title {
@@ -289,8 +288,9 @@
     place-items: center;
     flex-direction: column;
     gap: 30px;
-    width: clamp(341px, 100%, 357px);
-    max-height: 195px;
+    padding: 30px;
+    min-width: 293px;
+    min-height: 195px;
     background-color: var(--background-color);
     border: var(--accent-color) 2px solid;
 }
@@ -316,12 +316,13 @@ dialog::backdrop {
     font-family: var(--font-press);
     font-size: 14px;
     font-weight: 400;
+    line-height: 21px;
     max-width: 234px;
     color: var(--accent-color);
 }
 
 .dialog__button {
-    width: clamp(257px, 100%, 293px);
+    width: 100%;
     height: 38px;
     border: var(--accent-color) 2px solid;
 }
@@ -359,6 +360,10 @@ dialog::backdrop {
 
     .content__list__card {
         min-height: 760px;
+    }
+
+    .dialog[open] {
+        padding: 30px 42px;
     }
 
     .footer__button {
