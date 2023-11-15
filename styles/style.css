@@ -14,6 +14,36 @@
 
 */
 
+/* Filters */
+
+.card-filter-brightness {
+    filter: brightness(50%);
+}
+
+.card-filter-contrast {
+    filter: contrast(120%);
+}
+
+.card-filter-blur {
+    filter: blur(0.2rem);
+}
+
+.card-filter-grayscale {
+    filter: grayscale(1);
+}
+
+.card-filter-sepia {
+    filter: sepia(0.8);
+}
+
+.card-filter-invert {
+    filter: invert(0.7);
+}
+
+.card-filter-multiple {
+    filter: invert(0.7) saturate(200%) blur(0.1rem);
+}
+
 .page {
     min-inline-size: 320px;
     min-block-size: 100dvb;
@@ -120,7 +150,7 @@
 .theme-menu__list {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
 }
 
 .theme-menu__button {
@@ -184,7 +214,7 @@
 .content__list__cards {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 48px;
 }
 
 /* CARD */
@@ -230,6 +260,7 @@
             1px 0 var(--text-stroke-color),
             0 -1px var(--text-stroke-color);
     mix-blend-mode: hard-light;
+    z-index: 1;
 }
 
 @supports((-webkit-text-stroke: 1px #000000)) {
@@ -239,12 +270,17 @@
     }
 }
 
+.card-image-container {
+    max-height: 696px;
+    max-width: 696px;
+    border-top: var(--accent-color) 2px solid;
+    border-bottom: var(--accent-color) 2px solid;
+}
+
 .card-image {
     display: block;
     width: 100%;
     object-fit: contain;
-    border-top: var(--accent-color) 2px solid;
-    border-bottom: var(--accent-color) 2px solid;
 }
 
 .content__list__card-buttons {
