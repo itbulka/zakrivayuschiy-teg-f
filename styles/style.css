@@ -117,7 +117,7 @@
     font-family: var(--font-press);
     margin: 100px auto 0;
     width: clamp(375px, 100%, 696px);
-    height: 375px;
+    height: 365px;
     background-color: var(--background-color);
     border: var(--accent-color) 2px solid;
 }
@@ -214,7 +214,7 @@
 .content__list__cards {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 50px;
 }
 
 /* CARD */
@@ -391,7 +391,7 @@ dialog::backdrop {
 
 @media (width <= 375px) {
     .header {
-        height: 368px;
+        height: 327px;
     }
 
     .content__list__card {
@@ -404,5 +404,6 @@ dialog::backdrop {
 
     .footer__button {
         flex-direction: column;
+        width: 306px;
     }
 }
