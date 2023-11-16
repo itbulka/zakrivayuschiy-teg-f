@@ -2,8 +2,6 @@
 :root {
     --font-inter: 'Inter';
     --font-press: 'Press Start 2P';
-    --font-weight-title: 400;
-    --font-weight-text: 700;
     --line-color-gradiend: #d3d3d3;
     --start-color-gradiend: #e7e7e7;
     --end-color-gradiend: #1a1a1a;
@@ -18,4 +16,7 @@
     --color-heart-main: transparent;
     --color-heart-core: transparent;
     --color-heart-contour: rgba(0, 0, 0, 1);
+
+    --color-heart-black: rgba(0, 0, 0, 1);
+    --color-heart-red: rgba(255, 0, 0, 1);
 }
