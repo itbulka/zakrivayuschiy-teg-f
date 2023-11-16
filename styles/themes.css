@@ -37,24 +37,6 @@
     --text-stroke-color: #000;
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --background-color: #fff;
-        --accent-color: rgba(0, 0, 0, 1);
-        --accent-color-opacity: rgba(0, 0, 0, 0.6);
-        --color-button-text: rgba(255, 255, 255, 1);
-        --color-heart-contour: rgba(0, 0, 0, 1);
-        --font-weight-small: 400;
-        --font-weight-large: 700;
-
-        --line-color-gradiend: #d3d3d3;
-        --start-color-gradiend: #e7e7e7;
-        --end-color-gradiend: #1a1a1a;
-
-        --text-stroke-color: #fff;
-    }
-}
-
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #000;
