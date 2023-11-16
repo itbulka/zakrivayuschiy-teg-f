@@ -17,11 +17,11 @@
 
 @keyframes animation-menu-button {
     from {
-        left: -24px;
+        left: -4px;
     }
 
     to {
-        left: -20px;
+        left: 0;
     }
 }
 

@@ -145,10 +145,10 @@
 .theme-menu__button {
     font-size: 14px;
     font-weight: 400;
-    position: relative;
     transition: color ease 0.3s;
     text-transform: uppercase;
     padding: 0;
+    text-align: left;
 }
 
 .theme-menu__button:disabled,
@@ -156,12 +156,23 @@
     color: var(--accent-color-opacity);
 }
 
-.theme-menu__button:disabled:before {
+.theme-menu__button:before {
     content: '▶';
-    position: absolute;
-    inset-inline-start: -24px;
+    position: relative;
+    opacity: 0;
+    inset-inline-start: -4px;
     inset-block-start: 0;
     color: var(--accent-color-opacity);
+    animation:
+            animation-menu-button
+            alternate
+            infinite
+            ease-in-out
+            0.5s;
+}
+
+.theme-menu__button:disabled:before {
+    opacity: 1;
     animation:
             animation-menu-button
             alternate
@@ -224,6 +235,7 @@
 .card-content-text {
     display: flex;
     flex-direction: column;
+    line-height: 21px;
     gap: 27px;
     padding: 25px;
 }
@@ -317,7 +329,6 @@
     flex-direction: column;
     gap: 30px;
     padding: 30px;
-    min-width: 293px;
     background-color: var(--background-color);
     border: var(--accent-color) 2px solid;
 }
@@ -329,14 +340,13 @@ dialog::backdrop {
 .dialog__content {
     display: flex;
     column-gap: 20px;
-    place-items: center;
+    align-items: center;
+    justify-content: start;
 }
 
 .dialog-icon {
-    position: relative;
-    z-index: 1;
-    mix-blend-mode: difference;
-    color: var(--color-button-text);
+    mix-blend-mode: normal;
+    color: var(--accent-color);
 }
 
 .dialog__text {
@@ -345,6 +355,7 @@ dialog::backdrop {
     font-weight: 400;
     line-height: 21px;
     max-width: 234px;
+    width: 100%;
     color: var(--accent-color);
 }
 
@@ -386,7 +397,11 @@ dialog::backdrop {
     }
 
     .dialog[open] {
-        padding: 30px 42px;
+        padding: 30px 38px;
+    }
+
+    .dialog__text {
+        max-width: 198px
     }
 
     .footer__button {
