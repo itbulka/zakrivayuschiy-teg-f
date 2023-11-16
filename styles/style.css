@@ -119,13 +119,16 @@
     text-align: center;
 }
 
-.header__title {
+.header__logo {
+    display: block;
     font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
     font-weight: 400;
     padding-bottom: 20px;
+    cursor: none;
+    text-decoration: none;
 }
 
-.header__subtitle {
+.header__title {
     text-transform: uppercase;
     font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
     font-weight: 400;
@@ -359,22 +362,23 @@ dialog::backdrop {
     color: var(--accent-color);
 }
 
+.dialog__form {
+    width: 100%;
+}
+
 .dialog__button {
     width: 100%;
     min-height: 38px;
     border: var(--accent-color) 2px solid;
 }
 
-/* FOOTER */
-
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0 102px;
+.dialog .button__text {
+    text-transform: uppercase;
 }
 
-.footer__button {
+/* BUTTON SAVE */
+
+.button-save {
     display: flex;
     gap: 8px;
     justify-content: center;
@@ -382,9 +386,11 @@ dialog::backdrop {
     width: clamp(305px, 100%, 335px);
     padding-block: 15px;
     border: var(--accent-color) 2px solid;
+    place-self: center;
+    margin: 50px auto 103px;
 }
 
-.footer__button-icon {
+.button-save-icon {
     position: relative;
     z-index: 1;
     mix-blend-mode: difference;
@@ -404,7 +410,7 @@ dialog::backdrop {
         max-width: 198px
     }
 
-    .footer__button {
+    .button-save {
         flex-direction: column;
         width: 306px;
     }

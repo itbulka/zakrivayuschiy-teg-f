@@ -15,6 +15,7 @@
 
     --color-heart-main: transparent;
     --color-heart-core: transparent;
+    --color-heart-sparks: rgba(255, 0, 0, 1);
     --color-heart-contour: rgba(0, 0, 0, 1);
 
     --color-heart-black: rgba(0, 0, 0, 1);
