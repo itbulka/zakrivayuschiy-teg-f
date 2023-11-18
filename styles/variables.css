@@ -13,11 +13,11 @@
     --font-weight-small: 400;
     --font-weight-large: 700;
 
-    --color-heart-main: transparent;
-    --color-heart-core: transparent;
-    --color-heart-sparks: rgba(255, 0, 0, 1);
+    /* Переменная для цвета всего цвета (main-body, core) */
+    --color-heart-fill: transparent;
     --color-heart-contour: rgba(0, 0, 0, 1);
+    --color-heart-sparks: rgba(255, 0, 0, 1);
 
-    --color-heart-black: rgba(0, 0, 0, 1);
-    --color-heart-red: rgba(255, 0, 0, 1);
+    --color-hover-heart-fill: rgba(0, 0, 0, 1);
+    --color-animation-heart-fill: rgba(255, 0, 0, 1);
 }
