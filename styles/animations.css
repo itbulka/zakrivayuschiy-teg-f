@@ -17,11 +17,11 @@
 
 @keyframes animation-menu-button {
     from {
-        left: -4px;
+        left: -24px;
     }
 
     to {
-        left: 0;
+        left: -20px;
     }
 }
 
@@ -47,7 +47,7 @@
     }
 }
 
-.heart {
+.like-icon {
     transform-origin: center;
 }
 
@@ -102,7 +102,7 @@
     transition: fill linear 0.3s 0.06s;
 }
 
-.like-icon.is-liked .heart {
+.like-icon.is-liked {
     animation: animation-heart ease-in 0.3s 0.1s alternate;
 }
 

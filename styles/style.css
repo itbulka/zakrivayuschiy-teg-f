@@ -47,7 +47,7 @@
 .page {
     min-inline-size: 320px;
     min-block-size: 100dvb;
-    font-family: var(--font-inter), sans-serif, serif;
+    font-family: var(--font-inter), fantasy;
     font-variation-settings: "wght" var(--font-weight-small);
     background-image:
             repeating-linear-gradient(-90deg, var(--line-color-gradiend) 0, var(--line-color-gradiend) 2px, transparent 2px, transparent 4px),
@@ -60,7 +60,7 @@
 }
 
 .button {
-    font-family: var(--font-press), sans-serif, serif;
+    font-family: var(--font-press), fantasy;
     font-size: 14px;
     font-weight: 400;
     position: relative;
@@ -106,8 +106,8 @@
 
 .header {
     display: grid;
-    font-family: var(--font-press), sans-serif, serif;
-    width: clamp(375px, 100%, 700px);
+    font-family: var(--font-press), fantasy;
+    width: clamp(320px, 100%, 700px);
     margin: 100px auto 0;
     padding: 136px 0 25px;
     background-color: var(--background-color);
@@ -121,10 +121,12 @@
 
 .header__logo {
     display: block;
-    font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+    font-size: clamp(2.5rem, 1.1842rem + 6.5789vw, 4.0625rem);
     font-weight: 400;
     padding-bottom: 20px;
-    cursor: none;
+    cursor: auto;
+    outline: none;
+    appearance: none;
     text-decoration: none;
 }
 
@@ -143,9 +145,11 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-left: 14px;
 }
 
 .theme-menu__button {
+    position: relative;
     font-size: 14px;
     font-weight: 400;
     transition: color ease 0.3s;
@@ -159,23 +163,12 @@
     color: var(--accent-color-opacity);
 }
 
-.theme-menu__button:before {
+.theme-menu__button:disabled:before {
     content: '▶';
-    position: relative;
-    opacity: 0;
-    inset-inline-start: -4px;
+    position: absolute;
+    inset-inline-start: -24px;
     inset-block-start: 0;
     color: var(--accent-color-opacity);
-    animation:
-            animation-menu-button
-            alternate
-            infinite
-            ease-in-out
-            0.5s;
-}
-
-.theme-menu__button:disabled:before {
-    opacity: 1;
     animation:
             animation-menu-button
             alternate
@@ -211,7 +204,7 @@
 /* BLOCK MAIN */
 
 .content {
-    width: clamp(371px, 100%, 700px);
+    width: clamp(320px, 100%, 700px);
     margin: 100px auto 0;
 }
 
@@ -226,7 +219,7 @@
 .content__list__card {
     background-color: var(--background-color);
     border: var(--accent-color) 2px solid;
-    width: clamp(375px, 100%, 700px);
+    width: clamp(320px, 100%, 700px);
 }
 
 .content__list__card-title {
@@ -257,14 +250,11 @@
     position: absolute;
     top: 25px;
     right: 25px;
-    font-family: var(--font-press), sans-serif, serif;
+    font-family: var(--font-press), fantasy;
     font-size: 14px;
     line-height: 14px;
     font-weight: 400;
     text-shadow:
-            0 0 1 var(--text-stroke-color),
-            0 0 1 var(--text-stroke-color),
-            0 0 1 var(--text-stroke-color),
             0 0 1 var(--text-stroke-color);
     mix-blend-mode: hard-light;
     z-index: 1;
@@ -279,15 +269,12 @@
     }
 }
 
-.card-image-container {
-    max-height: 696px;
-    max-width: 696px;
-}
-
 .card-image {
     display: block;
+    aspect-ratio: 1/1;
     width: 100%;
     object-fit: cover;
+    background-position: center;
 }
 
 .content__list__card-buttons {
@@ -353,7 +340,7 @@ dialog::backdrop {
 }
 
 .dialog__text {
-    font-family: var(--font-press), sans-serif, serif;
+    font-family: var(--font-press), fantasy;
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
@@ -383,8 +370,8 @@ dialog::backdrop {
     gap: 8px;
     justify-content: center;
     align-items: center;
-    width: clamp(305px, 100%, 335px);
-    padding-block: 15px;
+    /*width: clamp(306px, 100%, 338px);*/
+    padding: 15px 20px;
     border: var(--accent-color) 2px solid;
     place-self: center;
     margin: 50px auto 103px;
@@ -394,6 +381,7 @@ dialog::backdrop {
     position: relative;
     z-index: 1;
     mix-blend-mode: difference;
+    flex-shrink: 1;
     color: var(--color-button-text);
 }
 
@@ -412,6 +400,10 @@ dialog::backdrop {
 
     .button-save {
         flex-direction: column;
-        width: 306px;
+    }
+
+    .button-save-icon {
+        width: 28px;
+        height: 28px;
     }
 }
